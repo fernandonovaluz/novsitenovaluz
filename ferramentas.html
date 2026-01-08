@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas do Gestor | NOVALUZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        novablue: '#0f172a',
+                        novaaccent: '#3b82f6',
+                        novagreen: '#10b981',
+                        novared: '#ef4444',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <i class="fa-solid fa-arrow-left text-novaaccent group-hover:-translate-x-1 transition"></i>
+                    <span class="font-bold text-xl text-novablue">Voltar para Home</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-16 bg-novablue text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <span class="text-novaaccent font-bold uppercase text-sm tracking-wider">Escritório Virtual</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Caixa de Ferramentas do Gestor</h1>
+            <p class="text-gray-400 text-lg">
+                Use nossas ferramentas gratuitas para medir a saúde da sua empresa. 
+                Se o resultado for ruim, nós temos a cura.
+            </p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 pb-20">
+        
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-novaaccent text-xl">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-novablue">Calculadora de CMV</h2>
+                </div>
+                
+                <p class="text-gray-600 mb-6 text-sm">O Custo de Mercadoria Vendida (CMV) é o maior ladrão de lucro. Simule o seu agora.</p>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-1">Faturamento Mensal (R$)</label>
+                        <input type="number" id="faturamento" placeholder="Ex: 50000" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-novaaccent focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-1">Custo com Compras/Insumos (R$)</label>
+                        <input type="number" id="custos" placeholder="Ex: 20000" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-novaaccent focus:outline-none">
+                    </div>
+                    
+                    <button onclick="calcularCMV()" class="w-full bg-novablue text-white font-bold py-3 rounded-lg hover:bg-novaaccent transition">
+                        Calcular Meu Lucro
+                    </button>
+                </div>
+
+                <div id="resultadoCMV" class="hidden mt-6 p-4 rounded-lg bg-gray-50 border border-gray-200">
+                    <p class="text-gray-500 text-sm font-bold uppercase">Seu CMV é:</p>
+                    <div class="text-4xl font-bold text-novablue mb-2" id="valorPorcentagem">0%</div>
+                    <div id="mensagemCMV" class="text-sm font-medium"></div>
+                    
+                    <a href="https://wa.me/55SEUNUMERO?text=Meu%20CMV%20deu%20ruim" class="hidden mt-4 inline-block text-novaaccent font-bold text-sm hover:underline" id="linkAjuda">
+                        Preciso baixar isso urgente <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-xl">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-novablue">Diagnóstico de Gestão</h2>
+                </div>
+                
+                <p class="text-gray-600 mb-6 text-sm">Marque o que sua empresa JÁ TEM funcionando perfeitamente:</p>
+
+                <div class="space-y-3 mb-6">
+                    <label class="flex items-center gap-3 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                        <input type="checkbox" class="check-diag w-5 h-5 text-novaaccent rounded" value="20">
+                        <span class="text-sm text-gray-700">Controle de Estoque em tempo real</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                        <input type="checkbox" class="check-diag w-5 h-5 text-novaaccent rounded" value="20">
+                        <span class="text-sm text-gray-700">DRE (Demonstrativo) mensal</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                        <input type="checkbox" class="check-diag w-5 h-5 text-novaaccent rounded" value="20">
+                        <span class="text-sm text-gray-700">Fichas Técnicas atualizadas</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                        <input type="checkbox" class="check-diag w-5 h-5 text-novaaccent rounded" value="20">
+                        <span class="text-sm text-gray-700">Metas de venda definidas pra equipe</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                        <input type="checkbox" class="check-diag w-5 h-5 text-novaaccent rounded" value="20">
+                        <span class="text-sm text-gray-700">Sistema que funciona offline</span>
+                    </label>
+                </div>
+
+                <button onclick="calcularDiagnostico()" class="w-full bg-purple-600 text-white font-bold py-3 rounded-lg hover:bg-purple-700 transition">
+                    Ver Minha Nota
+                </button>
+
+                <div id="resultadoDiag" class="hidden mt-6 text-center">
+                    <p class="text-sm text-gray-500 font-bold">Sua Maturidade de Gestão:</p>
+                    <div class="text-5xl font-bold text-novablue my-2" id="notaValor">0/100</div>
+                    <p id="textoDiagnostico" class="text-sm text-gray-600 mb-4"></p>
+                    <a href="https://wa.me/55SEUNUMERO" class="inline-block bg-novablue text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-novaaccent transition">
+                        Agendar Auditoria Completa
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
+            <div class="text-center mb-12">
+                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold uppercase">Sua Jornada na Novaluz</span>
+                <h2 class="text-3xl font-bold text-novablue mt-4">A Trilha da Organização Financeira</h2>
+                <p class="text-gray-600 mt-2">É assim que levamos sua empresa do caos à previsibilidade.</p>
+            </div>
+
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 z-0"></div>
+
+                <div class="grid md:grid-cols-4 gap-8 relative z-10">
+                    <div class="bg-white p-6 rounded-xl border-2 border-gray-100 text-center hover:border-novaaccent transition group">
+                        <div class="w-12 h-12 bg-gray-100 text-gray-500 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold group-hover:bg-novaaccent group-hover:text-white transition">1</div>
+                        <h3 class="font-bold text-novablue">Diagnóstico</h3>
+                        <p class="text-xs text-gray-500 mt-2">Mapeamento dos ralos de dinheiro e falhas de processo.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border-2 border-gray-100 text-center hover:border-novaaccent transition group">
+                        <div class="w-12 h-12 bg-gray-100 text-gray-500 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold group-hover:bg-novaaccent group-hover:text-white transition">2</div>
+                        <h3 class="font-bold text-novablue">Digitalização</h3>
+                        <p class="text-xs text-gray-500 mt-2">Implantação do CPLUG e padronização no AppSheet.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border-2 border-gray-100 text-center hover:border-novaaccent transition group">
+                        <div class="w-12 h-12 bg-gray-100 text-gray-500 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold group-hover:bg-novaaccent group-hover:text-white transition">3</div>
+                        <h3 class="font-bold text-novablue">Auditoria</h3>
+                        <p class="text-xs text-gray-500 mt-2">Confronto diário: Caixa vs. Cartão vs. Estoque.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border-2 border-green-100 text-center shadow-lg transform scale-105">
+                        <div class="w-12 h-12 bg-novagreen text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold animate-pulse"><i class="fa-solid fa-flag-checkered"></i></div>
+                        <h3 class="font-bold text-novagreen">Gestão Plena</h3>
+                        <p class="text-xs text-gray-500 mt-2">DRE confiável e Lucro na conta do sócio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Lógica da Calculadora CMV
+        function calcularCMV() {
+            const fat = document.getElementById('faturamento').value;
+            const custos = document.getElementById('custos').value;
+            const resDiv = document.getElementById('resultadoCMV');
+            const valorDiv = document.getElementById('valorPorcentagem');
+            const msgDiv = document.getElementById('mensagemCMV');
+            const linkAjuda = document.getElementById('linkAjuda');
+
+            if (!fat || !custos) return alert('Preencha os dois valores!');
+
+            const cmv = (custos / fat) * 100;
+            const cmvFormatado = cmv.toFixed(1) + '%';
+            
+            resDiv.classList.remove('hidden');
+            valorDiv.innerText = cmvFormatado;
+
+            if (cmv > 35) {
+                valorDiv.classList.add('text-novared');
+                valorDiv.classList.remove('text-novagreen');
+                msgDiv.innerHTML = '<span class="text-red-500 font-bold"><i class="fa-solid fa-triangle-exclamation"></i> PERIGO!</span> Seu custo está comendo seu lucro. A média saudável é até 30-32%.';
+                linkAjuda.classList.remove('hidden');
+            } else {
+                valorDiv.classList.add('text-novagreen');
+                valorDiv.classList.remove('text-novared');
+                msgDiv.innerHTML = '<span class="text-green-500 font-bold"><i class="fa-solid fa-check-circle"></i> ÓTIMO!</span> Sua operação está eficiente. Mantenha o controle.';
+                linkAjuda.classList.add('hidden');
+            }
+        }
+
+        // Lógica do Diagnóstico
+        function calcularDiagnostico() {
+            const checks = document.querySelectorAll('.check-diag:checked');
+            const nota = checks.length * 20; // 5 perguntas, 20 pontos cada
+            
+            const resDiv = document.getElementById('resultadoDiag');
+            const notaDiv = document.getElementById('notaValor');
+            const textoDiv = document.getElementById('textoDiagnostico');
+
+            resDiv.classList.remove('hidden');
+            notaDiv.innerText = nota;
+
+            if (nota <= 40) {
+                notaDiv.classList.add('text-red-500');
+                textoDiv.innerText = "Sua empresa está em risco operacional alto. Você depende da sorte, não de dados.";
+            } else if (nota <= 80) {
+                notaDiv.classList.add('text-yellow-500');
+                textoDiv.innerText = "Você tem boa intenção, mas faltam processos conectados. Ainda há dinheiro vazando.";
+            } else {
+                notaDiv.classList.add('text-green-500');
+                textoDiv.innerText = "Parabéns! Sua gestão é madura. Vamos focar em escalar esse lucro?";
+            }
+        }
+    </script>
+</body>
+</html>
