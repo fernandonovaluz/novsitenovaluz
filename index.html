@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVALUZ | Gestão estratégica & Tecnologia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        novablue: '#0f172a', // Azul Escuro Profissional
+                        novaaccent: '#3b82f6', // Azul Tech
+                        novagreen: '#10b981', // Verde Resultado
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-novaaccent text-2xl"></i>
+                    <span class="font-bold text-2xl tracking-tight text-novablue">NOVALUZ</span>
+                <div class="flex-shrink-0 flex items-center gap-2">
+                       <a href="#" class="text-gray-600 hover:text-novaaccent font-medium transition">Ferramentas Grátis</a>
+                    <a href="https://wa.me/558596862561" class="bg-novablue text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-novaaccent transition shadow-lg">
+                        Agendar Diagnóstico
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-3 shadow-xl">
+            <a href="#" class="block text-gray-700 font-medium">Consultoria & Processos</a>
+            <a href="#" class="block text-gray-700 font-medium">Sistema CPLUG</a>
+            <a href="#" class="block text-gray-700 font-medium">Ferramentas Grátis</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block bg-blue-50 text-novaaccent px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-blue-100">
+                Gestão Científica + Tecnologia de Ponta
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-novablue mb-6 leading-tight">
+                Transforme Caos Operacional <br>em <span class="text-novaaccent">Lucro Previsível</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+                Não somos apenas consultores. Somos engenheiros de negócio. Unimos a metodologia acadêmica com ferramentas digitais (CPLUG & AppSheet) para automatizar sua empresa.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#" class="bg-novaaccent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                    Conhecer a Metodologia
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#" class="bg-white text-novablue border border-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-novaaccent hover:text-novaaccent transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-store"></i>
+                    Ver Sistema CPLUG
+                </a>
+            </div>
+            
+            <div class="mt-16 opacity-60 grayscale hover:grayscale-0 transition duration-500">
+                <p class="text-sm text-gray-400 font-semibold mb-4 uppercase tracking-wider">Parceiro Oficial & Integrador</p>
+                <div class="flex justify-center items-center gap-12">
+                    <div class="text-2xl font-bold text-gray-400 flex items-center gap-2"><i class="fa-solid fa-server"></i> CPLUG</div>
+                    <div class="text-2xl font-bold text-gray-400 flex items-center gap-2"><i class="fa-brands fa-google"></i> AppSheet</div>
+                    <div class="text-2xl font-bold text-gray-400 flex items-center gap-2"><i class="fa-solid fa-chart-line"></i> PowerBI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-novablue mb-6">Sua empresa ainda roda no "feeling"?</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Muitos empresários têm sucesso apesar da desorganização, mas não conseguem escalar. O problema não é o produto, é o processo.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-500 mt-1"></i>
+                            <span class="text-gray-700">Controle de estoque em cadernos ou planilhas desconexas.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-500 mt-1"></i>
+                            <span class="text-gray-700">Funcionários sem padrão operacional (POPs).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-500 mt-1"></i>
+                            <span class="text-gray-700">Decisões tomadas sem dados financeiros reais.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-8 border border-gray-200 shadow-inner">
+                    <h3 class="text-xl font-bold text-novablue mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-novagreen"></i> O Padrão NOVALUZ
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-novaaccent">
+                            <h4 class="font-bold text-gray-800">1. Diagnóstico Científico</h4>
+                            <p class="text-sm text-gray-600">Análise profunda dos dados atuais para achar o lucro perdido.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-novaaccent">
+                            <h4 class="font-bold text-gray-800">2. Implementação CPLUG</h4>
+                            <p class="text-sm text-gray-600">Instalação do ERP líder para controlar cada centavo.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-novaaccent">
+                            <h4 class="font-bold text-gray-800">3. Processos no AppSheet</h4>
+                            <p class="text-sm text-gray-600">Criamos seu aplicativo próprio para gerir a rotina da equipe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-novablue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-novaaccent font-bold tracking-wider uppercase text-sm">Tecnologia Embarcada</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-8">Revenda Autorizada & Integradora CPLUG</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-12 text-lg">
+                Não vendemos apenas a licença. Entregamos o sistema configurado para o seu modelo de negócio (Varejo ou Food Service).
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/20 transition cursor-pointer border border-white/10">
+                    <div class="w-12 h-12 bg-novaaccent rounded-lg flex items-center justify-center mb-6 text-white text-xl">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Para Restaurantes</h3>
+                    <p class="text-gray-400 text-sm">KDS na cozinha, Cardápio Digital e Integração total com iFood. Fim dos erros de pedido.</p>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/20 transition cursor-pointer border border-white/10">
+                    <div class="w-12 h-12 bg-novagreen rounded-lg flex items-center justify-center mb-6 text-white text-xl">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Para Varejo</h3>
+                    <p class="text-gray-400 text-sm">Frente de caixa ultra-rápido que funciona offline. Controle de estoque multiloja em tempo real.</p>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/20 transition cursor-pointer border border-white/10">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-6 text-white text-xl">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Gestão na Palma da Mão</h3>
+                    <p class="text-gray-400 text-sm">Acompanhe o faturamento em tempo real pelo celular. Dashboards claros e objetivos.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <a href="#" class="inline-block border border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-novablue transition">
+                    Ver Funcionalidades Completas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 bg-white rounded-3xl shadow-2xl p-10 md:p-16 text-center border border-gray-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-novaaccent/10 rounded-full -mr-16 -mt-16"></div>
+            
+            <h2 class="text-3xl font-bold text-novablue mb-4">Sua empresa está pronta para a próxima fase?</h2>
+            <p class="text-gray-600 mb-8 text-lg">
+                Agende uma conversa estratégica de 30 minutos. Sem compromisso de venda, foco total em diagnóstico.
+            </p>
+            
+            <form action="https://formspree.io/f/xzdznqka" method="POST" class="max-w-md mx-auto space-y-4">
+    
+    <input type="email" name="email" placeholder="Seu melhor e-mail corporativo" required 
+           class="w-full px-5 py-4 rounded-xl border border-gray-300 focus:outline-none focus:border-novaaccent focus:ring-1 focus:ring-novaaccent transition">
+    
+    <button type="submit" class="w-full bg-novablue text-white font-bold py-4 rounded-xl hover:bg-novaaccent transition shadow-lg cursor-pointer">
+        Quero Evoluir Minha Gestão
+    </button>
+
+            </form>
+            <p class="mt-4 text-xs text-gray-400">Seus dados estão seguros. Não fazemos spam.</p>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-lightbulb text-novaaccent text-xl"></i>
+                        <span class="font-bold text-xl text-novablue">NOVALUZ</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">
+                        Consultoria de Gestão e Tecnologia para empresas que buscam alta performance.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-novablue mb-4">Serviços</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-novaaccent">Consultoria de Processos</a></li>
+                        <li><a href="#" class="hover:text-novaaccent">Implementação de ERP</a></li>
+                        <li><a href="#" class="hover:text-novaaccent">AppSheet Personalizado</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-novablue mb-4">Empresa</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-novaaccent">Sobre Nós</a></li>
+                        <li><a href="#" class="hover:text-novaaccent">Metodologia</a></li>
+                        <li><a href="#" class="hover:text-novaaccent">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-novablue mb-4">Contato</h4>
+                    <p class="text-sm text-gray-600 mb-2">contato@novaluzgestao.com.br</p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-novaaccent text-xl"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-novaaccent text-xl"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-novaaccent text-xl"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 pt-8 text-center text-sm text-gray-400">
+                &copy; 2024 NOVALUZ Gestão. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script simples para o menu mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
