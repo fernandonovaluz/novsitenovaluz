@@ -29,41 +29,62 @@
 
     <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center gap-2">
-                    <i class="fa-solid fa-lightbulb text-novaaccent text-2xl"></i>
-                    <span class="font-bold text-2xl tracking-tight text-novablue">NOVALUZ</span>
-                <div class="flex-shrink-0 flex items-center gap-2">
-                
-                    <a href="https://wa.me/558596862561" class="bg-novablue text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-novaaccent transition shadow-lg">
-                        Agendar Diagnóstico
+            <div class="flex justify-between h-24 items-center"> <div class="flex items-center gap-6">
+                    <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                        <i class="fa-solid fa-lightbulb text-novaaccent text-3xl"></i>
+                        <span class="font-bold text-2xl tracking-tight text-novablue">NOVALUZ</span>
+                    </div>
+
+                    <div class="hidden md:block w-px h-8 bg-gray-200"></div>
+
+                    <a href="https://novaluz.softr.app" target="_blank" class="hidden md:flex items-center gap-2 text-gray-500 font-bold hover:text-novablue transition group">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-novablue group-hover:text-white transition">
+                            <i class="fa-solid fa-lock text-sm"></i>
+                        </div>
+                        Área do Cliente
                     </a>
                 </div>
-                <div class="hidden md:flex items-center gap-4">
-    <a href="ferramentas.html" class="text-gray-600 hover:text-novaaccent font-medium transition">Ferramentas Grátis</a>
-    
-    <a href="https://elisha92034.softr.app" target="_blank" class="flex items-center gap-2 text-novablue font-bold border border-novablue px-5 py-2 rounded-lg hover:bg-novablue hover:text-white transition">
-        <i class="fa-solid fa-lock"></i>
-        Área do Cliente
-    </a>
 
-   </div>
+                <div class="hidden md:flex items-center gap-6">
+                    
+                    <a href="ferramentas.html" class="flex items-center gap-3 px-5 py-3 rounded-xl bg-blue-50 border border-blue-100 text-novablue font-bold text-lg hover:bg-white hover:border-novaaccent hover:text-novaaccent transition shadow-sm hover:shadow-md">
+                        <i class="fa-solid fa-gift text-novaaccent"></i>
+                        Ferramentas Grátis
+                    </a>
+
+                    <a href="https://wa.me/558596862561" class="bg-novablue text-white px-6 py-3 rounded-xl font-bold hover:bg-novaaccent transition shadow-lg flex items-center gap-2">
+                        Agendar Diagnóstico
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none p-2">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-3 shadow-xl">
-    <a href="https://novaluz.softr.app" target="_blank" class="flex items-center gap-2 text-novablue font-bold bg-blue-50 p-3 rounded-lg border border-blue-100">
-        <i class="fa-solid fa-lock"></i>
-        Acessar Área do Cliente
-    </a>
-    <a href="#" class="block text-gray-700 font-medium px-2">Consultoria & Processos</a>
-    <a href="#" class="block text-gray-700 font-medium px-2">Sistema CPLUG</a>
-    <a href="ferramentas.html" class="block text-gray-700 font-medium px-2">Ferramentas Grátis</a>
-</div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4 shadow-xl">
+            <a href="https://novaluz.softr.app" target="_blank" class="flex items-center justify-between w-full bg-gray-50 p-4 rounded-xl border border-gray-200 text-novablue font-bold">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-lock"></i> Acessar Área do Cliente</span>
+                <i class="fa-solid fa-chevron-right text-gray-400"></i>
+            </a>
+
+            <div class="border-t border-gray-100 my-2"></div>
+
+            <a href="ferramentas.html" class="flex items-center gap-3 text-lg font-bold text-novaaccent">
+                <i class="fa-solid fa-gift"></i> Ferramentas Grátis
+            </a>
+            
+            <a href="#" class="block text-gray-700 font-medium pl-2 border-l-2 border-transparent hover:border-novaaccent hover:text-novablue transition">Consultoria & Processos</a>
+            <a href="#" class="block text-gray-700 font-medium pl-2 border-l-2 border-transparent hover:border-novaaccent hover:text-novablue transition">Sistema CPLUG</a>
+            
+            <a href="https://wa.me/558596862561" class="block text-center bg-novablue text-white py-3 rounded-xl font-bold mt-4">
+                Agendar Diagnóstico
+            </a>
+        </div>
     </nav>
 
     <section class="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
