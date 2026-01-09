@@ -27,12 +27,88 @@
 </head>
 <body class="font-sans text-gray-800 antialiased">
 
-    <section class="pt-32 pb-20 bg-novablue text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="text-novaaccent font-bold tracking-wider uppercase text-sm">O Método NovaLuz</span>
-            <h1 class="text-4xl md:text-6xl font-bold mt-4 mb-6 leading-tight">
-                Não é mágica. <br>É <span class="text-novaaccent">Engenharia de Negócio.</span>
-            </h1>
+    <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-24 items-center">
+            
+            <div class="flex items-center gap-6">
+                <div class="flex-shrink-0 flex items-center cursor-pointer py-2" onclick="window.location.href='index.html'">
+                    <img src="logo-novaluz.png" alt="Novaluz - Gestão" class="h-16 w-auto object-contain">
+                </div>
+
+                <div class="hidden md:block w-px h-8 bg-gray-200"></div>
+
+                <a href="https://novaluz.softr.app" target="_blank" class="hidden md:flex items-center gap-2 text-gray-500 font-bold hover:text-novablue transition group">
+                    <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-novablue group-hover:text-white transition">
+                        <i class="fa-solid fa-lock text-sm"></i>
+                    </div>
+                    Área do Cliente
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-4">
+                
+                <a href="metodologia.html" class="flex items-center gap-2 px-4 py-3 rounded-xl text-gray-600 font-bold hover:bg-gray-50 hover:text-novablue transition">
+                    <i class="fa-solid fa-list-check text-novaaccent"></i>
+                    Nosso Método
+                </a>
+
+                <a href="ferramentas.html" class="flex items-center gap-2 px-4 py-3 rounded-xl bg-blue-50 border border-blue-100 text-novablue font-bold hover:bg-white hover:border-novaaccent hover:text-novaaccent transition shadow-sm">
+                    <i class="fa-solid fa-gift"></i>
+                    Ferramentas
+                </a>
+
+                <a href="https://wa.me/5585996862561" class="bg-novablue text-white px-6 py-3 rounded-xl font-bold hover:bg-novaaccent transition shadow-lg flex items-center gap-2">
+                    Agendar
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4 shadow-xl">
+        <a href="https://novaluz.softr.app" target="_blank" class="flex items-center justify-between w-full bg-gray-50 p-4 rounded-xl border border-gray-200 text-novablue font-bold">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-lock"></i> Área do Cliente</span>
+            <i class="fa-solid fa-chevron-right text-gray-400"></i>
+        </a>
+        
+        <div class="border-t border-gray-100 my-2"></div>
+
+        <a href="metodologia.html" class="block text-lg font-bold text-gray-700 hover:text-novaaccent">
+            <i class="fa-solid fa-list-check w-6"></i> Nosso Método
+        </a>
+        <a href="ferramentas.html" class="block text-lg font-bold text-gray-700 hover:text-novaaccent">
+            <i class="fa-solid fa-gift w-6"></i> Ferramentas Grátis
+        </a>
+        <a href="index.html#sobre" class="block text-lg font-medium text-gray-600 pl-8">
+            Sobre Nós
+        </a>
+        
+        <a href="https://wa.me/5585996862561" class="block text-center bg-novablue text-white py-3 rounded-xl font-bold mt-4">
+            Agendar Diagnóstico
+        </a>
+    </div>
+</nav>
+
+    <section class="pt-36 pb-20 bg-novablue text-white relative"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="mb-8">
+            <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-novaaccent transition text-sm font-bold uppercase tracking-wider border border-white/10 px-4 py-2 rounded-full hover:bg-white/5">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar para Início
+            </a>
+        </div>
+
+        <span class="text-novaaccent font-bold tracking-wider uppercase text-sm">O Método NovaLuz</span>
+        <h1 class="text-4xl md:text-6xl font-bold mt-4 mb-6 leading-tight">
+            Não é mágica. <br>É <span class="text-novaaccent">Engenharia de Negócio.</span>
+        </h1>
             <p class="text-xl text-gray-400 max-w-3xl mx-auto">
                 Esqueça as consultorias que entregam um PDF e somem. Nós instalamos um sistema vivo de gestão que combina consultoria estratégica, software e inteligência artificial.
             </p>
