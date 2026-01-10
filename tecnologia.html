@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecossistema CPLUG | NOVALUZ Gestão</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        novablue: '#0f172a',
+                        novaaccent: '#3b82f6',
+                        novagreen: '#10b981',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-24 items-center">
+            
+            <div class="flex items-center gap-6">
+                <div class="flex-shrink-0 flex items-center cursor-pointer py-2" onclick="window.location.href='index.html'">
+                    <img src="logo-novaluz.png" alt="Novaluz - Gestão" class="h-16 w-auto object-contain">
+                </div>
+
+                <div class="hidden md:block w-px h-8 bg-gray-200"></div>
+
+                <a href="https://novaluz.softr.app" target="_blank" class="hidden md:flex items-center gap-2 text-gray-500 font-bold hover:text-novablue transition group">
+                    <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-novablue group-hover:text-white transition">
+                        <i class="fa-solid fa-lock text-sm"></i>
+                    </div>
+                    Área do Cliente
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-4">
+                
+                <a href="metodologia.html" class="flex items-center gap-2 px-4 py-3 rounded-xl text-gray-600 font-bold hover:bg-gray-50 hover:text-novablue transition">
+                    <i class="fa-solid fa-list-check text-novaaccent"></i>
+                    Nosso Método
+                </a>
+
+                <a href="ferramentas.html" class="flex items-center gap-2 px-4 py-3 rounded-xl bg-blue-50 border border-blue-100 text-novablue font-bold hover:bg-white hover:border-novaaccent hover:text-novaaccent transition shadow-sm">
+                    <i class="fa-solid fa-gift"></i>
+                    Ferramentas
+                </a>
+
+                <a href="https://wa.me/5585996862561" class="bg-novablue text-white px-6 py-3 rounded-xl font-bold hover:bg-novaaccent transition shadow-lg flex items-center gap-2">
+                    Agendar
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4 shadow-xl">
+        <a href="https://novaluz.softr.app" target="_blank" class="flex items-center justify-between w-full bg-gray-50 p-4 rounded-xl border border-gray-200 text-novablue font-bold">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-lock"></i> Área do Cliente</span>
+            <i class="fa-solid fa-chevron-right text-gray-400"></i>
+        </a>
+        
+        <div class="border-t border-gray-100 my-2"></div>
+
+        <a href="metodologia.html" class="block text-lg font-bold text-gray-700 hover:text-novaaccent">
+            <i class="fa-solid fa-list-check w-6"></i> Nosso Método
+        </a>
+        <a href="ferramentas.html" class="block text-lg font-bold text-gray-700 hover:text-novaaccent">
+            <i class="fa-solid fa-gift w-6"></i> Ferramentas Grátis
+        </a>
+        <a href="index.html#sobre" class="block text-lg font-medium text-gray-600 pl-8">
+            Sobre Nós
+        </a>
+        
+        <a href="https://wa.me/5585996862561" class="block text-center bg-novablue text-white py-3 rounded-xl font-bold mt-4">
+            Agendar Diagnóstico
+        </a>
+    </div>
+</nav>
+
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia NovaLuz | Sistemas para Varejo e Food Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        novablue: '#0f172a',
+                        novaaccent: '#D4AF37', 
+                        novagreen: '#10b981',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <section class="pt-36 pb-20 bg-novablue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="mb-8">
+                <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-novaaccent transition text-sm font-bold uppercase tracking-wider border border-white/10 px-4 py-2 rounded-full hover:bg-white/5">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar para Home
+                </a>
+            </div>
+
+            <span class="text-novaaccent font-bold tracking-wider uppercase text-sm">Sistema de Gestão NovaLuz</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
+                Tecnologia que obedece <br>ao seu <span class="text-novaaccent">Processo.</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Não adaptamos sua empresa ao sistema. Configuramos o sistema para blindar a sua operação. 
+                Uma única plataforma para Vendas, Estoque e Financeiro.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white border-b border-gray-100 sticky top-20 z-40 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 flex justify-center gap-4 md:gap-8">
+            <a href="#foodservice" class="flex items-center gap-2 px-6 py-3 rounded-full bg-orange-50 text-orange-600 font-bold hover:bg-orange-100 transition border border-orange-100">
+                <i class="fa-solid fa-utensils"></i> Food Service
+            </a>
+            <a href="#varejo" class="flex items-center gap-2 px-6 py-3 rounded-full bg-blue-50 text-blue-600 font-bold hover:bg-blue-100 transition border border-blue-100">
+                <i class="fa-solid fa-bag-shopping"></i> Varejo
+            </a>
+        </div>
+    </section>
+
+    <section id="foodservice" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="p-4 bg-orange-100 rounded-2xl text-orange-600 text-3xl"><i class="fa-solid fa-burger"></i></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-novablue">Soluções para Food Service</h2>
+                    <p class="text-gray-500">Tecnologia para vender mais e errar menos.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                
+                <div class="border-2 border-orange-100 p-8 rounded-2xl hover:shadow-2xl hover:border-novaaccent transition group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-novaaccent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">AUMENTA O TICKET</div>
+                    
+                    <div class="text-4xl text-novablue mb-6 group-hover:text-novaaccent transition"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    
+                    <h3 class="text-2xl font-bold text-novablue mb-3">Totem de Autoatendimento</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        O cliente faz o pedido sozinho em uma tela intuitiva. O Totem nunca esquece de oferecer a batata grande ou a bebida extra, aumentando seu faturamento automaticamente.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-3">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Fim das filas no caixa</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Reduz custo com funcionários</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Vende visualmente (fotos)</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-100 p-8 rounded-2xl hover:shadow-xl transition group">
+                    <div class="text-4xl text-novablue mb-6 group-hover:text-novaaccent transition"><i class="fa-solid fa-qrcode"></i></div>
+                    
+                    <h3 class="text-2xl font-bold text-novablue mb-3">Cardápio Digital Inteligente</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Seja por QR Code na mesa ou Tablet na mão do garçom. Atualize preços em tempo real (sem gastar com gráfica) e envie o pedido direto para a produção.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-3">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Agilidade no salão</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Fotos que dão fome e vendem</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Integração total com estoque</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-100 p-8 rounded-2xl hover:shadow-xl transition group">
+                    <div class="text-4xl text-novablue mb-6 group-hover:text-novaaccent transition"><i class="fa-solid fa-tv"></i></div>
+                    
+                    <h3 class="text-2xl font-bold text-novablue mb-3">KDS (Monitor de Cozinha)</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Esqueça a impressora barulhenta. Os pedidos do Totem, do Garçom ou do Delivery aparecem organizados na tela da cozinha, com cronômetro de preparo.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-3">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Zero erros de leitura</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Gestão do tempo de entrega</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-100 p-8 rounded-2xl hover:shadow-xl transition group">
+                    <div class="text-4xl text-novablue mb-6 group-hover:text-novaaccent transition"><i class="fa-solid fa-motorcycle"></i></div>
+                    
+                    <h3 class="text-2xl font-bold text-novablue mb-3">Hub de Delivery & Gestão</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Centralize iFood e WhatsApp em uma única tela. Baixa automática de estoque (Ficha Técnica) a cada venda, garantindo que o lucro real seja calculado.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-3">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Tudo em uma tela só</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Controle financeiro automático</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="varejo" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="p-4 bg-blue-100 rounded-2xl text-blue-600 text-3xl"><i class="fa-solid fa-shop"></i></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-novablue">Soluções para Varejo</h2>
+                    <p class="text-gray-500">Lojas de Roupa, Mercados, Cosméticos e Eletrônicos.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-100 p-8 rounded-2xl hover:shadow-xl transition group">
+                    <h3 class="text-xl font-bold text-novablue mb-4 group-hover:text-novaaccent">PDV Híbrido (Online/Offline)</h3>
+                    <p class="text-gray-600 text-sm mb-6">Sua internet caiu? O caixa continua vendendo normalmente. O sistema sincroniza tudo quando a rede voltar.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Nunca pare de vender</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Sincronização automática</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border border-gray-100 p-8 rounded-2xl hover:shadow-xl transition group">
+                    <h3 class="text-xl font-bold text-novablue mb-4 group-hover:text-novaaccent">Gestão Multiloja</h3>
+                    <p class="text-gray-600 text-sm mb-6">Veja o estoque da Loja 1 e da Loja 2 na mesma tela. Faça transferências de mercadoria com um clique.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Visão unificada do dono</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Controle de estoque central</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border border-gray-100 p-8 rounded-2xl hover:shadow-xl transition group">
+                    <h3 class="text-xl font-bold text-novablue mb-4 group-hover:text-novaaccent">Fiscal Descomplicado</h3>
+                    <p class="text-gray-600 text-sm mb-6">Emissão de NFC-e, NF-e e SAT em segundos. O sistema já calcula os impostos configurados pelo seu contador.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Homologado em todo Brasil</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Envio automático p/ contador</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-novablue text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-white mb-6">Quer ver esse sistema rodando na sua empresa?</h2>
+            <p class="text-gray-400 mb-8">Agende uma demonstração guiada. Vamos configurar o sistema simulando a sua operação real.</p>
+            <a href="https://wa.me/5585996862561?text=Olá,%20quero%20uma%20demo%20do%20sistema%20NovaLuz" class="inline-block bg-novaaccent text-white text-lg font-bold px-10 py-4 rounded-xl hover:bg-yellow-600 transition shadow-xl transform hover:-translate-y-1">
+                Agendar Demonstração Grátis
+            </a>
+        </div>
+    </section>
+
+    </body>
+</html>
+
+    <footer class="bg-white py-8 text-center border-t border-gray-200">
+        <p class="text-gray-500 text-sm">© 2024 NOVALUZ Gestão. Parceiro Oficial CPLUG.</p>
+    </footer>
+
+</body>
+</html>
