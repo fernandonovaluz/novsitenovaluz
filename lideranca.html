@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVALUZ | Liderança & Alta Performance</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        novablue: '#0f172a', // Azul Escuro Profissional
+                        novaaccent: '#D4AF37', // Dourado Estratégico
+                        novagreen: '#10b981', // Verde Resultado
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Efeito sutil para o Player de Vídeo */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+   <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-24 items-center">
+            
+            <div class="flex items-center gap-6">
+                <div class="flex-shrink-0 flex items-center cursor-pointer py-2" onclick="window.location.href='index.html'">
+                    <img src="logo-novaluz.png" alt="Novaluz - Gestão" class="h-16 w-auto object-contain">
+                </div>
+                <div class="hidden md:block w-px h-8 bg-gray-200"></div>
+                <a href="https://elisha92034.softr.app/" target="_blank" class="hidden md:flex items-center gap-2 text-gray-500 font-bold hover:text-novablue transition group">
+                    <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-novablue group-hover:text-white transition">
+                        <i class="fa-solid fa-lock text-sm"></i>
+                    </div>
+                    Área do Cliente
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-2 px-4 py-3 rounded-xl text-gray-600 font-bold hover:bg-gray-50 hover:text-novablue transition">
+                    Home
+                </a>
+                <a href="metodologia.html" class="flex items-center gap-2 px-4 py-3 rounded-xl text-gray-600 font-bold hover:bg-gray-50 hover:text-novablue transition">
+                    <i class="fa-solid fa-list-check text-novaaccent"></i>
+                    Nosso Método
+                </a>
+                <a href="https://wa.me/558596862561" class="bg-novablue text-white px-6 py-3 rounded-xl font-bold hover:bg-novaaccent transition shadow-lg flex items-center gap-2">
+                    Agendar
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4 shadow-xl">
+        <a href="index.html" class="block text-lg font-bold text-gray-700">Home</a>
+        <a href="metodologia.html" class="block text-lg font-bold text-gray-700">Nosso Método</a>
+        <a href="https://wa.me/558596862561" class="block text-center bg-novablue text-white py-3 rounded-xl font-bold mt-4">Agendar Diagnóstico</a>
+    </div>
+   </nav>
+
+    <section class="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-left">
+                    <div class="inline-block bg-blue-50 text-novaaccent px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-blue-100">
+                        Nova Vertical: Gestão de Pessoas
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-novablue mb-6 leading-tight">
+                        A tecnologia organiza sua empresa. <br>
+                        <span class="text-novaaccent">A liderança faz ela crescer.</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Transforme gestores operacionais em líderes estratégicos. Da indústria ao escritório, formamos a camada de gestão que garante a execução do que foi planejado.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#programa" class="bg-novaaccent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-600 transition shadow-lg text-center">
+                            Conhecer Formação
+                        </a>
+                        <a href="#video-vsl" class="bg-white text-novablue border border-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-novaaccent hover:text-novaaccent transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play"></i> Ver como funciona
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-novablue to-novaaccent rounded-2xl blur-lg opacity-30"></div>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reunião de Liderança" class="relative rounded-2xl shadow-2xl border border-gray-100 grayscale hover:grayscale-0 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-vsl" class="py-20 bg-novablue relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl font-bold text-white mb-8">Por que processos perfeitos falham na mão da equipe?</h2>
+            
+            <div class="video-wrapper bg-black border-4 border-white/10">
+                <iframe src="https://www.youtube.com/embed/PLACEHOLDER?rel=0" title="Vídeo de Liderança NovaLuz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <p class="text-gray-400 mt-6 text-sm">Assista ao vídeo (4min) e entenda o "Gargalo Invisível" do seu negócio.</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-novaaccent font-bold tracking-wider uppercase text-sm">O Problema</span>
+                <h2 class="text-3xl font-bold text-novablue mt-2">O "Gargalo Invisível" do Crescimento</h2>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <i class="fa-solid fa-tasks text-4xl text-red-400 mb-4"></i>
+                    <h3 class="font-bold text-xl text-novablue mb-2">Execução Falha</h3>
+                    <p class="text-gray-500 text-sm">A estratégia é boa, mas morre na linha de frente por falta de padrão.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <i class="fa-solid fa-user-lock text-4xl text-red-400 mb-4"></i>
+                    <h3 class="font-bold text-xl text-novablue mb-2">Centralização</h3>
+                    <p class="text-gray-500 text-sm">Se você não mandar, ninguém faz. Você virou refém da operação.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <i class="fa-solid fa-door-open text-4xl text-red-400 mb-4"></i>
+                    <h3 class="font-bold text-xl text-novablue mb-2">Rotatividade</h3>
+                    <p class="text-gray-500 text-sm">Bons talentos pedem demissão por causa de gestores despreparados.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <i class="fa-solid fa-face-tired text-4xl text-red-400 mb-4"></i>
+                    <h3 class="font-bold text-xl text-novablue mb-2">Cultura Fraca</h3>
+                    <p class="text-gray-500 text-sm">A mediocridade é tolerada e as metas nunca são batidas com consistência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white border-y border-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-100 text-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-novaaccent/10 rounded-full -mr-16 -mt-16"></div>
+                
+                <h2 class="text-2xl md:text-3xl font-bold text-novablue mb-4"><i class="fa-solid fa-temperature-half text-novaaccent mr-2"></i> Termômetro de Liderança</h2>
+                <p class="text-gray-600 mb-8">Faça um teste rápido (sem cadastro) e descubra o nível de maturidade da sua gestão de pessoas.</p>
+
+                <div id="quiz-container" class="bg-white p-6 rounded-xl shadow-lg text-left max-w-2xl mx-auto">
+                    <div class="mb-6">
+                        <p class="font-bold text-gray-700 mb-3">1. O que acontece quando você sai de férias?</p>
+                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2">
+                            <input type="radio" name="q1" value="0" class="accent-novaaccent">
+                            <span class="text-sm text-gray-600">O celular não para e a equipe me chama para tudo.</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2">
+                            <input type="radio" name="q1" value="5" class="accent-novaaccent">
+                            <span class="text-sm text-gray-600">A rotina básica roda, mas decisões importantes param.</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
+                            <input type="radio" name="q1" value="10" class="accent-novaaccent">
+                            <span class="text-sm text-gray-600">A empresa bate metas e eu nem sou acionado.</span>
+                        </label>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="font-bold text-gray-700 mb-3">2. Como são as metas da sua equipe?</p>
+                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2">
+                            <input type="radio" name="q2" value="0" class="accent-novaaccent">
+                            <span class="text-sm text-gray-600">Não temos metas claras, cobramos "empenho".</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2">
+                            <input type="radio" name="q2" value="5" class="accent-novaaccent">
+                            <span class="text-sm text-gray-600">Existem metas gerais de faturamento, mas não individuais.</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
+                            <input type="radio" name="q2" value="10" class="accent-novaaccent">
+                            <span class="text-sm text-gray-600">Cada um tem seu KPI e ganha variável sobre ele.</span>
+                        </label>
+                    </div>
+
+                    <button onclick="calcularResultado()" class="w-full bg-novablue text-white font-bold py-3 rounded-lg hover:bg-novaaccent transition">
+                        Ver Meu Resultado
+                    </button>
+                </div>
+
+                <div id="quiz-result" class="hidden mt-6 bg-white p-6 rounded-xl shadow-lg border-2 border-novaaccent">
+                    <h3 class="text-xl font-bold text-novablue">Sua Pontuação: <span id="score-display" class="text-novaaccent text-3xl">0</span>/20</h3>
+                    <p id="feedback-text" class="text-gray-600 mt-2 text-sm"></p>
+                    <a href="#programa" class="block mt-4 text-novablue font-bold hover:underline">Veja como resolver isso abaixo ↓</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="py-24 bg-novablue relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-novaaccent font-bold tracking-wider uppercase text-sm">Engenharia Humana</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mt-4">Aplicamos nossa lógica de processos em pessoas</h2>
+            </div>
+    
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white/5 backdrop-blur-sm p-10 rounded-3xl border border-white/10 hover:border-novaaccent/50 transition duration-500 group hover:bg-white/10">
+                    <div class="w-16 h-16 bg-novaaccent rounded-2xl flex items-center justify-center text-3xl text-novablue mb-6">
+                        <i class="fa-solid fa-sitemap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">1. Organizar</h3>
+                    <ul class="text-gray-400 space-y-3">
+                        <li><i class="fa-solid fa-check text-novaaccent mr-2"></i> Design de Cargos (R&R)</li>
+                        <li><i class="fa-solid fa-check text-novaaccent mr-2"></i> Organograma Funcional</li>
+                        <li><i class="fa-solid fa-check text-novaaccent mr-2"></i> Matriz de Competências</li>
+                    </ul>
+                </div>
+    
+                <div class="bg-white/5 backdrop-blur-sm p-10 rounded-3xl border border-white/10 hover:border-novaaccent/50 transition duration-500 group hover:bg-white/10">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl text-novablue mb-6">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">2. Medir</h3>
+                    <ul class="text-gray-400 space-y-3">
+                        <li><i class="fa-solid fa-check text-novaaccent mr-2"></i> People Analytics</li>
+                        <li><i class="fa-solid fa-check text-novaaccent mr-2"></i> KPIs Comportamentais</li>
+                        <li><i class="fa-solid fa-check text-novaaccent mr-2"></i> Bonificação Variável</li>
+                    </ul>
+                </div>
+    
+                <div class="bg-white/5 backdrop-blur-sm p-10 rounded-3xl border border-white/10 hover:border-novaaccent/50 transition duration-500 group hover:bg-white/10">
+                    <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center text-3xl text-white mb-6">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">3. Agir</h3>
+                    <ul class="text-gray-400 space-y-3">
+                        <li><i class="fa-solid fa-check text-novaaccent mr-2"></i> Rituais de Feedback</li>
+                        <li><i class="fa-solid fa-check text-novaaccent mr-2"></i> PDI (Plano de Desenv.)</li>
+                        <li><i class="fa-solid fa-check text-novaaccent mr-2"></i> Treinamento de Líderes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programa" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-novaaccent font-bold tracking-wider uppercase text-sm">O Treinamento</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-novablue mt-2">Líder 360º NovaLuz</h2>
+                <p class="text-gray-500 mt-4">O Sistema Operacional Humano da sua empresa. Formação híbrida (Online + Mentoria).</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-novablue text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-novablue mb-2">Mentalidade do Líder Exponencial</h3>
+                        <p class="text-gray-600 mb-3">Transição de executor para gestor. O conceito de "Extreme Ownership" e inteligência emocional corporativa.</p>
+                        <span class="text-xs bg-gray-100 text-gray-500 px-3 py-1 rounded-full font-bold">Mindset</span>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-novablue text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-novablue mb-2">A Ciência da Comunicação e Delegação</h3>
+                        <p class="text-gray-600 mb-3">Como delegar sem "delargar". Técnicas de check-back, validação e condução de reuniões produtivas.</p>
+                        <span class="text-xs bg-gray-100 text-gray-500 px-3 py-1 rounded-full font-bold">Técnico</span>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-novablue text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-novablue mb-2">Gestão Orientada a Dados</h3>
+                        <p class="text-gray-600 mb-3">Traduzindo comportamento em números. Como criar metas justas e usar o sistema (ERP) para auditar a equipe.</p>
+                        <span class="text-xs bg-novaaccent/20 text-novaaccent px-3 py-1 rounded-full font-bold">Diferencial NovaLuz</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/558596862561?text=Tenho%20interesse%20na%20Formação%20de%20Líderes" class="bg-novablue text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-novaaccent transition shadow-xl inline-flex items-center gap-3">
+                    Quero Formar Meus Líderes
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="mb-6">
+                        <img src="logo-novaluz.png" alt="Novaluz Consultoria" class="h-12 w-auto mb-3">
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Transformamos empresas através de Gestão Estratégica, Tecnologia e agora, Liderança de Alta Performance.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-novablue mb-4">Soluções</h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li><a href="index.html" class="hover:text-novaaccent transition">Gestão 360</a></li>
+                        <li><a href="#" class="text-novaaccent font-bold">Liderança e Pessoas</a></li>
+                        <li><a href="tecnologia.html" class="hover:text-novaaccent transition">Tecnologia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-novablue mb-4">A NovaLuz</h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li><a href="index.html#sobre" class="hover:text-novaaccent transition">Sobre Nós</a></li>
+                        <li><a href="metodologia.html" class="hover:text-novaaccent transition">Nossa Metodologia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-novablue mb-4">Fale Conosco</h4>
+                    <p class="text-sm text-gray-600 mb-2">contato@novaluzgestao.com.br</p>
+                    <p class="text-sm text-gray-600 mb-4">(85) 99686-2561</p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="https://www.instagram.com/gestaonovaluz/" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-pink-600 hover:text-white transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/558596862561" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-green-500 hover:text-white transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 NOVALUZ Gestão. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Lógica do Termômetro de Liderança (Simples e Eficaz)
+        function calcularResultado() {
+            // Pega os valores selecionados
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+
+            if (!q1 || !q2) {
+                alert("Por favor, responda todas as perguntas para ver o termômetro.");
+                return;
+            }
+
+            const score = parseInt(q1.value) + parseInt(q2.value);
+            const display = document.getElementById('score-display');
+            const text = document.getElementById('feedback-text');
+            const resultBox = document.getElementById('quiz-result');
+            const quizContainer = document.getElementById('quiz-container');
+
+            // Esconde perguntas, mostra resultado
+            quizContainer.classList.add('hidden');
+            resultBox.classList.remove('hidden');
+
+            display.innerText = score;
+
+            if (score <= 5) {
+                text.innerHTML = "<strong>Alerta Vermelho:</strong> Sua operação é altamente dependente de você. Sua liderança precisa ser construída do zero urgente.";
+                text.classList.add('text-red-600');
+            } else if (score <= 15) {
+                text.innerHTML = "<strong>Atenção:</strong> Você tem gerentes, mas eles ainda agem como operacional. Falta método para virarem líderes.";
+                text.classList.add('text-yellow-600');
+            } else {
+                text.innerHTML = "<strong>Parabéns:</strong> Você tem uma boa estrutura. O curso vai ajudar a refinar e escalar ainda mais.";
+                text.classList.add('text-green-600');
+            }
+        }
+    </script>
+</body>
+</html>
