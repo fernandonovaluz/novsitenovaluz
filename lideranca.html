@@ -174,43 +174,92 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-novablue mb-4"><i class="fa-solid fa-temperature-half text-novaaccent mr-2"></i> Termômetro de Liderança</h2>
                 <p class="text-gray-600 mb-8">Faça um teste rápido (sem cadastro) e descubra o nível de maturidade da sua gestão de pessoas.</p>
 
-                <div id="quiz-container" class="bg-white p-6 rounded-xl shadow-lg text-left max-w-2xl mx-auto">
-                    <div class="mb-6">
-                        <p class="font-bold text-gray-700 mb-3">1. O que acontece quando você sai de férias?</p>
-                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2">
-                            <input type="radio" name="q1" value="0" class="accent-novaaccent">
-                            <span class="text-sm text-gray-600">O celular não para e a equipe me chama para tudo.</span>
-                        </label>
-                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2">
-                            <input type="radio" name="q1" value="5" class="accent-novaaccent">
-                            <span class="text-sm text-gray-600">A rotina básica roda, mas decisões importantes param.</span>
-                        </label>
-                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                            <input type="radio" name="q1" value="10" class="accent-novaaccent">
-                            <span class="text-sm text-gray-600">A empresa bate metas e eu nem sou acionado.</span>
-                        </label>
-                    </div>
+                <div id="quiz-container" class="bg-white p-6 md:p-8 rounded-xl shadow-lg text-left max-w-3xl mx-auto border border-gray-100">
+    
+    <div class="mb-6 border-b border-gray-100 pb-4">
+        <p class="font-bold text-gray-700 mb-3 text-lg">1. O que acontece quando você sai de férias?</p>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q1" value="0" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">O celular não para. Sou acionado para apagar incêndios.</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q1" value="5" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">A rotina básica roda, mas decisões importantes param.</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+            <input type="radio" name="q1" value="10" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">A empresa bate metas e eu nem sou acionado.</span>
+        </label>
+    </div>
 
-                    <div class="mb-6">
-                        <p class="font-bold text-gray-700 mb-3">2. Como são as metas da sua equipe?</p>
-                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2">
-                            <input type="radio" name="q2" value="0" class="accent-novaaccent">
-                            <span class="text-sm text-gray-600">Não temos metas claras, cobramos "empenho".</span>
-                        </label>
-                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2">
-                            <input type="radio" name="q2" value="5" class="accent-novaaccent">
-                            <span class="text-sm text-gray-600">Existem metas gerais de faturamento, mas não individuais.</span>
-                        </label>
-                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                            <input type="radio" name="q2" value="10" class="accent-novaaccent">
-                            <span class="text-sm text-gray-600">Cada um tem seu KPI e ganha variável sobre ele.</span>
-                        </label>
-                    </div>
+    <div class="mb-6 border-b border-gray-100 pb-4">
+        <p class="font-bold text-gray-700 mb-3 text-lg">2. Como sua equipe recebe feedback?</p>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q2" value="0" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Não dou feedback, ou só falo quando algo dá muito errado (bronca).</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q2" value="5" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Tento conversar, mas eles levam para o lado pessoal e ficam chateados.</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+            <input type="radio" name="q2" value="10" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Temos rituais quinzenais e eles saem da sala motivados a melhorar.</span>
+        </label>
+    </div>
 
-                    <button onclick="calcularResultado()" class="w-full bg-novablue text-white font-bold py-3 rounded-lg hover:bg-novaaccent transition">
-                        Ver Meu Resultado
-                    </button>
-                </div>
+    <div class="mb-6 border-b border-gray-100 pb-4">
+        <p class="font-bold text-gray-700 mb-3 text-lg">3. Como é seu processo de contratação?</p>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q3" value="0" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Na urgência: "Tem pulso? Está contratado".</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q3" value="5" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Faço entrevista e confio no meu "feeling" (intuição).</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+            <input type="radio" name="q3" value="10" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Processo técnico: Teste prático, análise de perfil e check de referências.</span>
+        </label>
+    </div>
+
+    <div class="mb-6 border-b border-gray-100 pb-4">
+        <p class="font-bold text-gray-700 mb-3 text-lg">4. Quando surge um conflito na equipe:</p>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q4" value="0" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Finjo que não vi e espero que se resolvam sozinhos.</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q4" value="5" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Eu entro no meio como "juiz" e decido quem tem razão.</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+            <input type="radio" name="q4" value="10" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Meus líderes resolvem na base da cultura da empresa, sem me acionar.</span>
+        </label>
+    </div>
+
+    <div class="mb-6">
+        <p class="font-bold text-gray-700 mb-3 text-lg">5. Metas e Indicadores:</p>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q5" value="0" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Não temos metas claras, cobramos "vestir a camisa".</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 mb-2 transition">
+            <input type="radio" name="q5" value="5" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Existem metas de faturamento global, mas ninguém sabe sua meta individual.</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+            <input type="radio" name="q5" value="10" class="accent-novaaccent w-5 h-5">
+            <span class="text-gray-600">Cada setor tem KPI claro e ganha variável sobre resultado.</span>
+        </label>
+    </div>
+
+    <button onclick="calcularResultado()" class="w-full bg-novablue text-white font-bold py-4 rounded-xl hover:bg-novaaccent transition shadow-lg text-lg">
+        Gerar Meu Diagnóstico
+    </button>
+</div>
 
                 <div id="quiz-result" class="hidden mt-6 bg-white p-6 rounded-xl shadow-lg border-2 border-novaaccent">
                     <h3 class="text-xl font-bold text-novablue">Sua Pontuação: <span id="score-display" class="text-novaaccent text-3xl">0</span>/20</h3>
@@ -220,6 +269,57 @@
             </div>
         </div>
     </section>
+
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            
+            <div>
+                <span class="text-red-500 font-bold tracking-wider uppercase text-sm">Finanças & Pessoas</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-novablue mt-2 mb-6">Quanto custa contratar errado?</h2>
+                <p class="text-gray-600 text-lg mb-6">
+                    Muitos empresários olham apenas para a rescisão. O custo real envolve recrutamento, treinamento, baixa produtividade e impacto na equipe.
+                </p>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-sm">
+                    <p class="italic text-gray-700">
+                        "O funcionário mais caro não é o que ganha bem, é o que precisa ser trocado a cada 6 meses."
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <h3 class="text-xl font-bold text-novablue mb-6 border-b pb-2">Calculadora de Desperdício</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-500 mb-1">Funcionários que saíram (últimos 12 meses)</label>
+                        <input type="number" id="calc-qtd" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-novaaccent outline-none" placeholder="Ex: 3">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-bold text-gray-500 mb-1">Salário Médio (R$)</label>
+                        <input type="number" id="calc-salario" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-novaaccent outline-none" placeholder="Ex: 2500">
+                    </div>
+
+                    <button onclick="calcularTurnover()" class="w-full bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition mt-2">
+                        Calcular Prejuízo
+                    </button>
+                </div>
+
+                <div id="resultado-turnover" class="hidden mt-6 bg-red-50 p-4 rounded-lg border border-red-100 text-center animate-pulse">
+                    <p class="text-sm text-red-600 font-bold uppercase">Você perdeu aproximadamente:</p>
+                    <p id="valor-prejuizo" class="text-4xl font-extrabold text-red-600 my-2">R$ 0,00</p>
+                    <p class="text-xs text-gray-500">Considerando custos de rescisão, nova contratação, treinamento e curva de aprendizado (aprox. 2.5x o salário).</p>
+                    
+                    <a href="#programa" class="block mt-4 bg-novablue text-white py-2 rounded text-sm font-bold hover:bg-novaaccent transition">
+                        Parar de perder dinheiro
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <section id="metodologia" class="py-24 bg-novablue relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -361,47 +461,74 @@
     </footer>
 
     <script>
-        // Menu Mobile
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+    // Menu Mobile
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
 
-        // Lógica do Termômetro de Liderança (Simples e Eficaz)
-        function calcularResultado() {
-            // Pega os valores selecionados
-            const q1 = document.querySelector('input[name="q1"]:checked');
-            const q2 = document.querySelector('input[name="q2"]:checked');
+    // --- LÓGICA DO TERMÔMETRO (QUIZ) ---
+    function calcularResultado() {
+        // Pega os valores (retorna null se não selecionado)
+        const q1 = document.querySelector('input[name="q1"]:checked');
+        const q2 = document.querySelector('input[name="q2"]:checked');
+        const q3 = document.querySelector('input[name="q3"]:checked');
+        const q4 = document.querySelector('input[name="q4"]:checked');
+        const q5 = document.querySelector('input[name="q5"]:checked');
 
-            if (!q1 || !q2) {
-                alert("Por favor, responda todas as perguntas para ver o termômetro.");
-                return;
-            }
-
-            const score = parseInt(q1.value) + parseInt(q2.value);
-            const display = document.getElementById('score-display');
-            const text = document.getElementById('feedback-text');
-            const resultBox = document.getElementById('quiz-result');
-            const quizContainer = document.getElementById('quiz-container');
-
-            // Esconde perguntas, mostra resultado
-            quizContainer.classList.add('hidden');
-            resultBox.classList.remove('hidden');
-
-            display.innerText = score;
-
-            if (score <= 5) {
-                text.innerHTML = "<strong>Alerta Vermelho:</strong> Sua operação é altamente dependente de você. Sua liderança precisa ser construída do zero urgente.";
-                text.classList.add('text-red-600');
-            } else if (score <= 15) {
-                text.innerHTML = "<strong>Atenção:</strong> Você tem gerentes, mas eles ainda agem como operacional. Falta método para virarem líderes.";
-                text.classList.add('text-yellow-600');
-            } else {
-                text.innerHTML = "<strong>Parabéns:</strong> Você tem uma boa estrutura. O curso vai ajudar a refinar e escalar ainda mais.";
-                text.classList.add('text-green-600');
-            }
+        if (!q1 || !q2 || !q3 || !q4 || !q5) {
+            alert("Por favor, responda todas as 5 perguntas para gerar o diagnóstico.");
+            return;
         }
-    </script>
+
+        const score = parseInt(q1.value) + parseInt(q2.value) + parseInt(q3.value) + parseInt(q4.value) + parseInt(q5.value);
+        const display = document.getElementById('score-display');
+        const text = document.getElementById('feedback-text');
+        const resultBox = document.getElementById('quiz-result');
+        const quizContainer = document.getElementById('quiz-container');
+
+        // Esconde perguntas, mostra resultado
+        quizContainer.classList.add('hidden');
+        resultBox.classList.remove('hidden');
+
+        // A pontuação máxima agora é 50
+        display.innerText = score;
+
+        if (score <= 15) {
+            text.innerHTML = "<strong>Alerta Crítico (Nível Operacional):</strong> Sua empresa depende 100% de você. Se você parar, a empresa para. Você não tem líderes, tem ajudantes. Precisamos começar do zero.";
+            text.classList.add('text-red-600');
+        } else if (score <= 35) {
+            text.innerHTML = "<strong>Nível Gerencial (Em Transição):</strong> Você tem pessoas boas, mas falta método. Eles tentam ajudar, mas acabam errando na gestão de pessoas e conflitos. O curso vai dar as ferramentas que faltam.";
+            text.classList.add('text-yellow-600');
+        } else {
+            text.innerHTML = "<strong>Nível Estratégico:</strong> Parabéns! Você já tem uma cultura forte. A Formação NovaLuz servirá para refinar os detalhes e preparar sua empresa para escalar/franquear.";
+            text.classList.add('text-green-600');
+        }
+        
+        // Rola a tela para o resultado
+        resultBox.scrollIntoView({behavior: "smooth"});
+    }
+
+    // --- LÓGICA DA CALCULADORA DE TURNOVER ---
+    function calcularTurnover() {
+        const qtd = parseFloat(document.getElementById('calc-qtd').value);
+        const salario = parseFloat(document.getElementById('calc-salario').value);
+        const resultadoBox = document.getElementById('resultado-turnover');
+        const valorDisplay = document.getElementById('valor-prejuizo');
+
+        if (!qtd || !salario) {
+            alert("Preencha a quantidade e o salário.");
+            return;
+        }
+
+        // Custo estimado de Turnover = 2.5x o salário (Rescisão + Contratação + Treinamento + Baixa Performance inicial)
+        // Fonte: Estudos de RH (SHRM) estimam entre 6 a 9 meses de salário, mas usamos 2.5x para ser conservador e realista no Brasil.
+        const prejuizo = (qtd * salario) * 2.5;
+
+        valorDisplay.innerText = prejuizo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        resultadoBox.classList.remove('hidden');
+    }
+</script>
 </body>
 </html>
